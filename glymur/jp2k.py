@@ -1348,7 +1348,7 @@ class Jp2k(Jp2kBox):
                 raise IOError(msg)
 
         dparam.cp_reduce = rlevel
-        dparam.jpwl_correct = False
+        dparam.jpwl_correct = True
         if area is not None:
             if area[0] < 0 or area[1] < 0 or area[2] <= 0 or area[3] <= 0:
                 msg = ("The upper left corner coordinates must be nonnegative "
