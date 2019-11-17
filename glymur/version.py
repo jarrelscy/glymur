@@ -24,7 +24,10 @@ version = "0.8.11"
 _sv = LooseVersion(version)
 version_tuple = _sv.version
 
-openjpeg_version = "2.3.1"
+if opj2.OPENJP2 is None and opj.OPENJPEG is not None:
+    openjpeg_version = opj.version()	
+else:	
+    openjpeg_version = opj2.version()	
 
 _sv = LooseVersion(openjpeg_version)
 openjpeg_version_tuple = _sv.version
